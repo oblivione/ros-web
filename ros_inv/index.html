@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+      <body>
+        <ul id="workspace_dropdown" class="dropdown-content">
+          <li id="workspace_create"><a href="#workspace_create_modal">Create</a></li>
+          <li><a href="#!">Edit</a></li>
+          <li><a href="#!">Search</a></li>
+        </ul>
+        <ul id="package_dropdown" class="dropdown-content">
+          <li id="package_create"><a href="#package_create_modal">Create</a></li>
+          <li><a href="#!">Edit</a></li>
+          <li><a href="#!">Search</a></li>
+        </ul>
+        </ul>
+          <ul id="camera_dropdown" class="dropdown-content">
+          <li id="camera_move"><a href="#camera_move_modal">Front view</a></li>
+          <li><a href="#!">Top view</a></li>
+          <li><a href="#!">Side view</a></li>
+        </ul>
+        <ul id="select_dropdown" class="dropdown-content" >
+          <li id="select_move"><a href="#select_modal">CNC</a></li>
+          <li><a href="#!">Hand Robots</a></li>
+          <li><a href="#!"> Drillers</a></li>     
+        </ul>
+        
+        <nav>
+          <div class="nav-wrapper">
+            <a href="#" class="brand-logo right">Logo</a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+              <li><a class="dropdown-button" href="#!" data-activates="workspace_dropdown">Workspace<i class="material-icons right">arrow_drop_down</i></a></li>
+              <li><a class="dropdown-button" href="#!" data-activates="package_dropdown">Package<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a class="dropdown-button" href="#!" data-activates="camera_dropdown">Move Camera<i class="material-icons right">arrow_drop_down</i></a></li>
+              <li><a class="dropdown-button" href="#!" data-activates="select_dropdown">Select<i class="material-icons right">arrow_drop_down</i></a></li>
+              <li> <a href="#!" class="collection-item" id = "2d_nav">2DNav Goal</a></li>
+               <li> <a href="#!" class="collection-item" id = "2d_pose">2DPose Estimate</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="container">
+          <div class="row">
+            <div class="col m3">
+              <div class="collection">
+                <a href="#!" class="collection-item" id = "imu_data">IMU</a>
+                <a href="#!" class="collection-item " id = "depth_data">Depth_Sensor</a>
+                <a href="#!" class="collection-item" id = "position_data">Positions</a>
+                <a href="#!" class="collection-item" id= "error_data">Error_data</a>
+              </div>
+            </div>
+            <div class="col m5">
+              <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+          <iframe width="320" height="400" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Camera View<i class="material-icons right">more_vert</i></span>
+      <br>
+      <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">play arrow</i></a>
+                 <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">pause</i></a>
+                 <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">autorenew</i></a>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+      <p>Here is some more information about this product that is only revealed once clicked on.</p>
+    </div>
+  </div>
+              
+
+            
+            </div>
+            <div class="col m4">
+              <div class="collection">
+                 <a class="waves-effect waves-light btn collection-item" id = "start_id">Start</a>
+                 <a class="waves-effect waves-light btn collection-item" id = "stop_id">Stop</a>
+                 <a class="waves-effect waves-light btn collection-item" id = "reset_id">Reset</a>
+              </div>
+              <div class="card">
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Parameter &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Values</span>
+      <span class="card-title activator grey-text text-darken-2">Parameter &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Values</span>
+      <span class="card-title activator grey-text text-darken-2">Parameter &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Values</span>
+      <span class="card-title activator grey-text text-darken-2">Parameter &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Values</span>
+      <span class="card-title activator grey-text text-darken-2">Parameter &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Values</span>
+      <span class="card-title activator grey-text text-darken-2">Parameter &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Values</span>
+      <span class="card-title activator grey-text text-darken-2">Parameter &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Values</span>
+      <!--<p><a href="#">This is a link</a></p>-->
+    </div>
+  </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12">
+              <div class="section">
+              <a class="waves-effect waves-light btn collection-item" id = "load_id">Load</a>
+                 <a class="waves-effect waves-light btn collection-item" id = "save_id">Save</a>
+                 <a class="waves-effect waves-light btn collection-item" id = "clear_id">Clear</a>    
+               </div>
+               <div class="divider"></div>
+               <div class="section">
+                <table id="data_table">
+        <thead>
+          <tr>
+              <th data-field="id">Messages</th>
+              <th data-field="severity">Severity</th>
+              <th data-field="node">Node</th>
+              <th data-field="node">Data</th>
+              
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Value of YPR from ins</td>
+            <td>info</td>
+            <td>/vn_100/ins_data</td>
+            <td>value</td>
+            
+          </tr>
+           <tr>
+            <td>Value of sensor_data from ins</td>
+            <td>info</td>
+            <td>/vn_100/sensor_data</td>
+            <td>value</td>
+          </tr>
+        </tbody>
+      </table>
+               </div>
+             </div>
+          </div>
+        </div>
+        <!-- Modal Structure -->
+        <div id="workspace_create_modal" class="modal">
+          <div class="modal-content">
+            <h5>Workspace Creation</h5>
+            <form class='col s4'>
+              <div class="input-field col s4">
+                <input id="workspace_name" type="text" class="validate">
+                <label for="workspace_name">Workspace name</label>
+              </div>
+            </form>  
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Create</a>
+          </div>
+        </div>
+        <div id="package_create_modal" class="modal">
+          <div class="modal-content">
+            <h5>Package Creation</h5>
+            <form class='col s4'>
+              <div class="input-field col s4">
+                <input id="package_name" type="text" class="validate">
+                <label for="package_name">Package name</label>
+              </div>
+            </form>  
+          </div>
+
+          <div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Create</a>
+          </div>
+        </div>
+
+        <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="http://cdn.robotwebtools.org/EventEmitter2/current/eventemitter2.js"></script>
+      <script type="text/javascript" src="http://cdn.robotwebtools.org/roslibjs/current/roslib.js"></script>
+
+     <script type="text/javascript" type="text/javascript">
+     
+      var ros = new ROSLIB.Ros({
+      url : 'ws://localhost:9090'
+      });
+      
+     
+      //Start , Stop,Reset click events
+      
+         $('#start_id').click(event,function(){
+         var listener = new ROSLIB.Topic({
+         ros : ros,
+         name : '/start_variable',
+         messageType : 'std_msgs/UInt16'
+         });
+   
+      });
+      
+      $('#depth_data').click(event,function(){
+         var listener = new ROSLIB.Topic({
+        ros : ros,
+        name : '/depth_value',
+       messageType : 'std_msgs/Float64'
+    });
+    listener.subscribe(function(message) {
+    console.log('Received message on ' + listener.name + ': ' + message.data);
+    var data_string = "<tr><td>"+"Depth_value"+"</td><td>"+"info"+"</td><td>"+listener.name+"</td><td>"+message.data+"</td></tr>";
+    $("#data_table > tbody").append(data_string)
+    listener.unsubscribe();
+  });
+      });
+      
+       $('#imu_data').click(event,function(){
+         var listener = new ROSLIB.Topic({
+        ros : ros,
+        name : '/vn_100/ins_data',
+       messageType : 'vn_100/ins_data'
+    });
+    listener.subscribe(function(message) {
+    console.log('Received message on ' + listener.name + ': ' + message.data);
+    var data_string = "<tr><td>"+"Imu_value"+"</td><td>"+"info"+"</td><td>"+listener.name+"</td><td>"+"x:"+message.YPR.x+"&nbsp;"+"&nbsp;"+"y:"+message.YPR.y+"</td></tr>";
+    $("#data_table > tbody").append(data_string)
+    listener.unsubscribe();
+  });
+      });
+      
+      $('#clear_id').click(event,function(){
+    var data_string = "<tr><td>"+" "+"</td><td>"+" "+"</td><td>"+ " "+"</td><td>"+" "+"</td></tr>";
+    $("#data_table > tbody").html(data_string)
+
+  });
+    
+      
+      $('#workspace_create').click(event, function(){
+      //  $('#workspace_create_modal').openModal();
+         var fibonacciClient = new ROSLIB.ActionClient({
+          ros : ros,
+          serverName : '/fibonacci',
+          actionName : 'vn_100/FibonacciAction'
+           });
+           var goal = new ROSLIB.Goal({
+    actionClient : fibonacciClient,
+    goalMessage : {
+      order : 7
+       }
+     });                 
+
+  goal.on('feedback', function(feedback) {
+    console.log('Feedback: ' + feedback.sequence);
+  });
+
+  goal.on('result', function(result) {
+    console.log('Final Result: ' + result.sequence);
+  });
+
+  ros.on('connection', function() {
+    console.log('Connected to websocket server.');
+  });
+
+  ros.on('error', function(error) {
+    console.log('Error connecting to websocket server: ', error);
+  });
+
+  ros.on('close', function() {
+    console.log('Connection to websocket server closed.');
+  });
+
+  goal.send();
+
+      });
+      $('#package_create').click(event, function(){
+        $('#package_create_modal').openModal();
+      });
+      $('#workspace_create_modal > .modal-footer > .modal-close').click(event,function(){
+        console.log($('#workspace_name').val())
+        var workspace_name = $('#workspace_name').val()
+        $.ajax({
+          method: "GET",
+          url: "http://192.168.50.243:8080/execute_command/",
+          data: { command_name : "workspace_create", workspace_name : workspace_name+""},
+          dataType: "json"
+          })
+        .done(function( msg ) {
+          console.log( "Data Saved: ");
+          console.log(msg);
+        });
+      });
+      $('#package_create_modal > .modal-footer > .modal-close').click(event,function(){
+        console.log($('#package_name').val())
+        var package_name = $('#package_name').val()
+        $.ajax({
+          method: "POST",
+          url: "http://192.168.50.243:8080/execute_command/",
+          data: { command_name : "package_create", package_name : package_name},
+          dataType: "json"
+          })
+        .done(function( msg ) {
+          console.log( "Data Saved:" );
+          console.log(msg);
+        });
+      });      
+      </script>
+    </body>
+  </html>
+
+
+        
